@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev:client": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -34,6 +35,7 @@
     "babel-loader": "^7.1.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^2.30.1",
     "webpack": "^3.5.3",
     "webpack-dev-server": "^2.7.1"
   }
