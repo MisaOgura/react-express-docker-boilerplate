@@ -10,3 +10,6 @@ dist/
 
 # Logs
 *.log
+
+# Jest testing
+coverage
