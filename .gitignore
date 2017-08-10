@@ -1,0 +1,12 @@
+# Dependency directory
+node_modules
+.DS_Store
+
+# IntelliJ
+/.idea
+
+# bundled files
+dist/
+
+# Logs
+*.log
