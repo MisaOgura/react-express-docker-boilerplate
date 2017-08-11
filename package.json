@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently 'npm run build:client:dev' 'npm run build:server:dev' 'nodemon ./dist/server/index.js'",
     "build:client:dev": "webpack --config webpack.config.js --profile --colors --watch",
-    "build:server:dev": "babel src -d dist --copy-files --watch",
+    "build:server:dev": "babel app -d dist --copy-files --watch",
     "dev:client": "webpack-dev-server",
     "test": "jest --coverage --watch"
   },
