@@ -1,0 +1,14 @@
+version: '3'
+services:
+  app:
+    build: .
+    environment:
+      - PORT=8080
+      - NODE_ENV=dev
+      - ENV_NAME=local
+    ports:
+      - "8080:8080"
+    volumes:
+    - ./app:/opt/app/app
+    - ./test:/opt/app/test
+    - ./package.json:/opt/app/package.json
