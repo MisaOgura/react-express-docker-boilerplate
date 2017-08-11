@@ -12,13 +12,13 @@ server.get('/', (req, res) => {
   const pathToHtml = path.join(__dirname, './views/index.html')
   const template = fs.readFileSync(pathToHtml, 'utf8')
 
-  const renderedHelloWorldApp = renderToString(<HelloWorld/>)
+  const renderedHelloWorldApp = renderToString(<HelloWorld />)
   const page = template.replace('<!-- CONTENT -->', renderedHelloWorldApp)
 
   res.status(200).send(page)
 })
 
-if ( !module.parent ) {
+if (!module.parent) {
   server.listen(8080, () => {
     console.log('Server started on port 8080...')
   })

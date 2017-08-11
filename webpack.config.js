@@ -18,7 +18,7 @@ module.exports = {
   entry: ['./app/client'],
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'dist')
   },
   module: {
     loaders: [

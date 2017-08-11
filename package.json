@@ -11,12 +11,10 @@
     "build:client:dev": "webpack --config webpack.config.js --profile --colors --watch",
     "build:server": "babel app -d dist --copy-files",
     "build:server:dev": "babel app -d dist --copy-files --watch",
-    "test": "jest --coverage --watch"
-  },
-  "jest": {
-    "testPathIgnorePatterns": [
-      "dist/"
-    ]
+    "test": "jest --coverage && standard",
+    "test:watch": "jest --coverage --watch",
+    "standard": "standard",
+    "standard:fix": "standard --fix"
   },
   "repository": {
     "type": "git",
@@ -55,8 +53,26 @@
     "jest": "^20.0.4",
     "nodemon": "^1.11.0",
     "react-test-renderer": "^15.6.1",
+    "standard": "^10.0.3",
     "supertest": "^3.0.0",
     "webpack": "^3.5.3",
     "webpack-dev-server": "^2.7.1"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "dist/"
+    ]
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "context",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach",
+      "it",
+      "expect"
+    ]
   }
 }
