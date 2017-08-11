@@ -13,3 +13,6 @@ dist/
 
 # Jest testing
 coverage
+
+# Yarn
+yarn.lock
