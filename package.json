@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build:prod && node ./dist/server/index.js",
-    "dev": "concurrently 'npm run build:client:dev' 'npm run build:server:dev' 'nodemon ./dist/server/index.js'",
+    "start": "npm run build:prod && node ./dist/server/server.js",
+    "dev": "concurrently 'npm run build:client:dev' 'npm run build:server:dev' 'nodemon ./dist/server/server.js'",
     "build:prod": "npm run build:server && npm run build:client",
     "build:client": "webpack --config webpack.prod.config.js --profile --colors",
     "build:client:dev": "webpack --config webpack.config.js --profile --colors --watch",
