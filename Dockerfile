@@ -1,8 +1,4 @@
-FROM node:6.9-slim
-
-RUN yarn --version || curl -o- -L https://yarnpkg.com/install.sh | bash
-ENV PATH "/root/.yarn/bin:$PATH"
-RUN yarn --version
+FROM node:8-slim
 
 WORKDIR /opt/app/
 
