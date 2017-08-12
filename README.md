@@ -85,7 +85,7 @@ Docker is installed on the machine.
 
 ### To run tests
 
-The project uses [Jest](https://facebook.github.io/jest/]) as a test runner.
+The project uses [Jest](https://facebook.github.io/jest/) as a test runner.
 It comes with useful features like parallel testing, intelligent test watching
 and coverage report.
 
