@@ -1,7 +1,8 @@
 ## React-ES6-Express App with Docker
 
-_**Get your React application up and running in 1 minute**_
+_**Get your React application up and running under 2 minutes**_
 
+I wrote a [blog post](https://medium.com/@misaogura/hello-world-once-more-4d262286f138) on why I created this boilerplate and thoughts that went into it.
 
 ## Instruction
 
@@ -106,9 +107,9 @@ and coverage report.
 Happy TDD!
 
 
-## Contrinutions
+## Contributions
 
-Please feel free to raise PRs to help improve the boilerplate.
+Please feel free to raise PRs or open issues to help improve the boilerplate.
 
 
 ## Authour
