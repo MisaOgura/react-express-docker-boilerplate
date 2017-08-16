@@ -6,6 +6,6 @@ COPY package.json yarn.lock ./
 
 RUN yarn install
 
-ADD . .
+COPY . .
 
 CMD yarn start

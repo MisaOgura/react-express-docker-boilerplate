@@ -10,4 +10,3 @@ services:
       - "8080:8080"
     volumes:
     - ./app:/opt/app/app
-    - ./package.json:/opt/app/package.json
