@@ -12,7 +12,7 @@
     "build:server": "babel app -d dist --copy-files",
     "build:server:dev": "babel app -d dist --copy-files --watch",
     "test": "jest --coverage && standard",
-    "test:watch": "jest --coverage --watch",
+    "test:watch": "jest --watch",
     "standard": "standard",
     "standard:fix": "standard --fix"
   },
