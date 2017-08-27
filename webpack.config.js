@@ -27,7 +27,6 @@ module.exports = {
         loaders: 'babel-loader',
         include: __dirname,
         exclude: /node_modules/
-
       }
     ]
   },
