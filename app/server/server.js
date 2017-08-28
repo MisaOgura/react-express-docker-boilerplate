@@ -12,8 +12,8 @@ server.get('/', (req, res) => {
   const pathToHtml = path.join(__dirname, './views/index.html')
   const template = fs.readFileSync(pathToHtml, 'utf8')
 
-  const renderedHelloWorldApp = renderToString(<HelloWorld />)
-  const page = template.replace('<!-- CONTENT -->', renderedHelloWorldApp)
+  const renderedHelloWorld = renderToString(<HelloWorld />)
+  const page = template.replace('<!-- CONTENT -->', renderedHelloWorld)
 
   res.status(200).send(page)
 })

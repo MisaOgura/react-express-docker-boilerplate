@@ -15,6 +15,6 @@ describe('HelloWorld', () => {
   })
 
   it('renders the correct message', () => {
-    expect(wrapper.text()).toContain('Hello world from react component!')
+    expect(wrapper.text()).toContain('Hello world!')
   })
 })
