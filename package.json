@@ -1,8 +1,8 @@
 {
-  "name": "react-e6-express-boilerplate",
+  "name": "react-express-docker-boilerplate",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Boilerplate for React-Express app with testing framework and Docker integration",
+  "main": "app/server/server.js",
   "scripts": {
     "start": "npm run build:prod && node ./dist/server/server.js",
     "dev": "concurrently 'npm run build:client:dev' 'npm run build:server:dev' 'nodemon ./dist/server/server.js'",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MisaOgura/react-e6-express-boilerplate.git"
+    "url": "git+https://github.com/MisaOgura/react-express-docker-boilerplate.git"
   },
   "keywords": [
     "javascript",
@@ -26,14 +26,16 @@
     "es6",
     "express",
     "webpack",
-    "babel"
+    "babel",
+    "docker",
+    "jest"
   ],
   "author": "Misa Ogura",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MisaOgura/react-e6-express-boilerplate/issues"
+    "url": "https://github.com/MisaOgura/react-express-docker-boilerplate/issues"
   },
-  "homepage": "https://github.com/MisaOgura/react-e6-express-boilerplate#readme",
+  "homepage": "https://github.com/MisaOgura/react-express-docker-boilerplate#readme",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
