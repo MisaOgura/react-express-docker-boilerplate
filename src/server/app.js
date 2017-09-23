@@ -6,9 +6,9 @@ import { renderToString } from 'react-dom/server'
 
 import HelloWorld from '../client/components/helloWorld'
 
-const server = express()
+const app = express()
 
-server.get('/', (req, res) => {
+app.get('/', (req, res) => {
   const pathToHtml = path.join(__dirname, './views/index.html')
   const template = fs.readFileSync(pathToHtml, 'utf8')
 
@@ -19,9 +19,9 @@ server.get('/', (req, res) => {
 })
 
 if (!module.parent) {
-  server.listen(8080, () => {
+  app.listen(8080, () => {
     console.log('Server started on port 8080...')
   })
 }
 
-export default server
+export default app

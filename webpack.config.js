@@ -7,7 +7,7 @@ const plugins = [
     verbose: true
   }),
   new HtmlWebpackPlugin({
-    template: path.join(__dirname, 'app/server/views/index.html'),
+    template: path.join(__dirname, 'src/server/views/index.html'),
     filename: 'index.html',
     inject: 'body'
   })
@@ -15,7 +15,7 @@ const plugins = [
 
 module.exports = {
   devtool: 'eval-source-map',
-  entry: ['./app/client'],
+  entry: ['./src/client'],
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, 'dist')

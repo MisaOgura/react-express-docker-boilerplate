@@ -9,4 +9,4 @@ services:
     ports:
       - "8080:8080"
     volumes:
-    - ./app:/opt/app/app
+    - ./src:/opt/app/src

@@ -1,6 +1,6 @@
 import request from 'supertest'
 
-import server from '../server'
+import server from '../app'
 
 describe('Server', () => {
   it('renders HelloWorld component', async () => {
