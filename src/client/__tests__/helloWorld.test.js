@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import HelloWorld from '../components/helloWorld'
+import HelloWorld from '../containers/helloWorld'
 
 describe('HelloWorld', () => {
   let wrapper
