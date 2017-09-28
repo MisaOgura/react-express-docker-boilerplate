@@ -10,10 +10,8 @@ pipeline {
                 sh 'npm --version'
                 sh 'echo "Printing environmental variables..."'
                 sh 'printenv'
-                sh 'echo "Installing yarn..."'
-                sh 'yarn install'
                 sh 'echo "Running unit tests..."'
-                sh 'yarn test'
+                sh 'npm test'
             }
         }
     }
