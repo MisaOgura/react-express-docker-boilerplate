@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
+                slackSend "Started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
                 sh 'node --version'
                 sh 'npm --version'
                 sh 'echo "Printing environmental variables..."'
@@ -24,18 +25,19 @@ pipeline {
         }
         success {
             echo 'Job status: Success! :D'
-            slackSend   channel: '#jenkins-notifications',
-                        color: 'good',
+            slackSend   color: 'good',
                         message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
         }
         failure {
             echo 'Job status: Failure... :('
-            slackSend   channel: '#jenkins-notifications',
-                        color: 'bad',
+            slackSend   color: 'danger',
                         message: "The pipeline ${currentBuild.fullDisplayName} failed."
         }
         unstable {
             echo 'Job status: Unstable :/'
+            slackSend   color: 'warning',
+            message: "The pipeline ${currentBuild.fullDisplayName} is unstable."
+
         }
         changed {
             echo 'A change has been detected in the job status.'
