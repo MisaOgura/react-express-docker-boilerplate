@@ -1,12 +1,13 @@
 pipeline {
-    agent { docker 'node:8-slim' }
+    agent { docker 'node:7-alpine' }
+    environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
+    }
     stages {
         stage('Test') {
             steps {
-                sh 'echo "Installing yarn..."'
-                sh 'yarn install'
-                sh 'echo "Running unit tests..."'
-                sh 'yarn test'
+                sh 'printenv'
             }
         }
     }
