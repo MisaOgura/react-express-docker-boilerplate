@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker 'node:7-alpine' }
+    agent { docker 'node:8-slim' }
     environment {
         DISABLE_AUTH = 'true'
         DB_ENGINE    = 'sqlite'
