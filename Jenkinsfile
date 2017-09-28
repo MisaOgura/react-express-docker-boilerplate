@@ -1,13 +1,13 @@
 pipeline {
     agent { docker 'node:8-slim' }
     environment {
-        DISABLE_AUTH = 'true'
-        DB_ENGINE    = 'sqlite'
+        TEST_ENV = 'test env on Jenkins'
     }
     stages {
         stage('Test') {
             steps {
-                sh 'sudo su'
+                sh 'Printing environmental variables..."'
+                sh 'printenv'
                 sh 'echo "Installing yarn..."'
                 sh 'yarn install'
                 sh 'echo "Running unit tests..."'
@@ -17,19 +17,20 @@ pipeline {
     }
     post {
         always {
-            echo 'This will always run'
+            echo 'Finished running the job with a status below:'
+            deleteDir()
         }
         success {
-                    echo 'This will run only if success'
+            echo 'Job status: Success! :D'
         }
         failure {
-                    echo 'This will run only if failure'
+            echo 'Job status: Failure... :('
         }
         unstable {
-                    echo 'This will run only if the run was marked unstable'
+            echo 'Job status: Unstable :/'
         }
         changed {
-                    echo 'This will run only if the state of the Pipeline has changed'
+            echo 'A change has been detected in the job status.'
         }
     }
 }
