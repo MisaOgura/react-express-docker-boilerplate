@@ -7,7 +7,11 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'cat /etc/passwd'
+                sh 'sudo su'
+                sh 'echo "Installing yarn..."'
+                sh 'yarn install'
+                sh 'echo "Running unit tests..."'
+                sh 'yarn test'
             }
         }
     }
