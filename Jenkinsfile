@@ -6,6 +6,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
+                sh 'node --version'
+                sh 'npm --version'
                 sh 'echo "Printing environmental variables..."'
                 sh 'printenv'
                 sh 'echo "Installing yarn..."'
