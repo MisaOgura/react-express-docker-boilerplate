@@ -24,9 +24,15 @@ pipeline {
         }
         success {
             echo 'Job status: Success! :D'
+            slackSend   channel: '#jenkins-notifications',
+                        color: 'good',
+                        message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
         }
         failure {
             echo 'Job status: Failure... :('
+            slackSend   channel: '#jenkins-notifications',
+                        color: 'bad',
+                        message: "The pipeline ${currentBuild.fullDisplayName} failed."
         }
         unstable {
             echo 'Job status: Unstable :/'
