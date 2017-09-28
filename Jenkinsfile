@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'echo "Fail!"; exit 1'
+                sh 'echo "Installing yarn..."'
+                sh 'yarn install'
+                sh 'echo "Running unit tests..."'
+                sh 'yarn test'
             }
         }
     }
