@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'printenv'
+                sh 'whoami'
             }
         }
     }
