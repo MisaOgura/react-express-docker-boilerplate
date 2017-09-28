@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'Printing environmental variables..."'
+                sh 'Printing environmental variables...'
                 sh 'printenv'
                 sh 'echo "Installing yarn..."'
                 sh 'yarn install'
