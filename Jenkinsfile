@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'cat ./etc/passwd'
+                sh 'cat /etc/passwd'
             }
         }
     }
