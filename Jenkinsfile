@@ -25,14 +25,14 @@ pipeline {
         }
         success {
             ansiColor('xterm') {
-                echo '\e[100mJob status:\e[0m \e[92mSuccess! :D'
+                echo "\e[100mJob status:\e[0m \e[92mSuccess! :D"
             }
             slackSend   color: 'good',
                         message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
         }
         failure {
             ansiColor('xterm') {
-                echo '\e[100mJob status:\e[0m \e[91mFailure... :('
+                echo "\e[100mJob status:\e[0m \e[91mFailure... :("
             }
             slackSend   color: 'danger',
                         message: "The pipeline ${currentBuild.fullDisplayName} failed."
