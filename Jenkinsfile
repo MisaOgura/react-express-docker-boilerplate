@@ -24,22 +24,19 @@ pipeline {
             deleteDir()
         }
         success {
-            ansiColor   colorMapName: 'xterm'
-            echo '\e[100mJob status:\e[0m \e[92mSuccess! :D'
+            echo 'Job status: Success! :D'
             slackSend   color: 'good',
                         message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
         }
         failure {
-            ansiColor   colorMapName: 'xterm'
-            echo '\e[100mJob status:\e[0m \e[91mFailure... :('
+            echo 'Job status: Failure... :('
             slackSend   color: 'danger',
                         message: "The pipeline ${currentBuild.fullDisplayName} failed."
         }
         unstable {
             echo 'Job status: Unstable :/'
             slackSend   color: 'warning',
-            message: "The pipeline ${currentBuild.fullDisplayName} is unstable."
-
+                        message: "The pipeline ${currentBuild.fullDisplayName} is unstable."
         }
         changed {
             echo 'A change has been detected in the job status.'
