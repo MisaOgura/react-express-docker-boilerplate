@@ -6,16 +6,19 @@ pipeline {
     stages {
         stage ("Test") {
             steps {
-                ansiColor('xterm') {
-                    sh "yarn install"
-                    sh "yarn test"
-                }
+                slackSend "Started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                sh 'echo "Printing environmental variables..."'
+                sh 'printenv'
+                sh 'echo "Installing dependencies..."'
+                sh 'yarn install'
+                sh 'echo "Running unit tests..."'
+                sh 'yarn test'
             }
         }
     }
     post {
         always {
-            echo 'Finished running the job with a status below:'
+            echo 'Finished running the job with a status below.'
             deleteDir()
         }
         success {
