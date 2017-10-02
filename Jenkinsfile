@@ -23,7 +23,7 @@ pipeline {
     }
     post {
         always {
-            echo 'Finished running the job with a status below.'
+            echo 'Finished running the job.'
             deleteDir()
         }
         success {
