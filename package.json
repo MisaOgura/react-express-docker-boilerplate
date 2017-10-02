@@ -12,7 +12,7 @@
     "build:client:dev": "webpack --config webpack.config.js --profile --colors --watch",
     "build:server": "babel src -d dist --copy-files --ignore '**/*.test.js'",
     "build:server:dev": "babel src -d dist --copy-files --ignore '**/*.test.js' --watch",
-    "test": "jest --coverage",
+    "test": "jest --coverage && standard",
     "test:watch": "jest --watch",
     "standard": "standard",
     "standard:fix": "standard --fix"
