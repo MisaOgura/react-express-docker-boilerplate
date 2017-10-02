@@ -5,14 +5,16 @@ pipeline {
     }
     stages {
         stage ("Test") {
-            ansiColor('xterm') {
-                slackSend "Started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
-                sh 'echo "Printing environmental variables..."'
-                sh 'printenv'
-                sh 'echo "Installing dependencies..."'
-                sh 'yarn install'
-                sh 'echo "Running unit tests..."'
-                sh 'yarn test'
+            steps {
+                ansiColor('xterm') {
+                    slackSend "Started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                    sh 'echo "Printing environmental variables..."'
+                    sh 'printenv'
+                    sh 'echo "Installing dependencies..."'
+                    sh 'yarn install'
+                    sh 'echo "Running unit tests..."'
+                    sh 'yarn test'
+                }
             }
         }
     }
