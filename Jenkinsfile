@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker 'node:8-slim' }
+    agent { docker 'node:8-alpine' }
     environment {
         TEST_ENV = 'test env on Jenkins'
     }
