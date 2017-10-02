@@ -3,7 +3,7 @@ pipeline {
     options {
         ansiColor('xterm')
         timestamps()
-        timeout(time: 10, unit: 'MINUTES')
+        timeout(time: 1, unit: 'HOURS')
     }
     environment {
         TEST_ENV = 'test env on Jenkins'
