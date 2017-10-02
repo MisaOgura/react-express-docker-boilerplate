@@ -5,7 +5,7 @@ pipeline {
     }
     stages {
         stage ("Test") {
-            node ("test") {
+            steps {
                 checkout scm
 
                 wrap([$class: “AnsiColorBuildWrapper”]) {
