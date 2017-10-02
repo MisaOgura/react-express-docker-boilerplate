@@ -21,16 +21,12 @@ pipeline {
             deleteDir()
         }
         success {
-            ansiColor('xterm') {
-                echo "\e[100mJob status:\e[0m \e[92mSuccess! :D"
-            }
+            echo "Job status: Success! :D"
             slackSend   color: 'good',
                         message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
         }
         failure {
-            ansiColor('xterm') {
-                echo "\e[100mJob status:\e[0m \e[91mFailure... :("
-            }
+            echo "Job status: Failure... :("
             slackSend   color: 'danger',
                         message: "The pipeline ${currentBuild.fullDisplayName} failed."
         }
