@@ -4,17 +4,14 @@ pipeline {
         TEST_ENV = 'test env on Jenkins'
     }
     stages {
-        stage('Test') {
-            steps {
-                slackSend "Started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
-                sh 'node --version'
-                sh 'npm --version'
-                sh 'echo "Printing environmental variables..."'
-                sh 'printenv'
-                sh 'echo "Installing yarn..."'
-                sh 'yarn install'
-                sh 'echo "Running unit tests..."'
-                sh 'yarn test'
+        stage ("Test") {
+            node ("test") {
+                checkout scm
+
+                wrap([$class: “AnsiColorBuildWrapper”]) {
+                    sh "npm install"
+                    sh "npm run test"
+                }
             }
         }
     }
