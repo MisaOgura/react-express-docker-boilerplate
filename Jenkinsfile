@@ -5,7 +5,7 @@ pipeline {
     }
     stages {
         stage ("Test") {
-            steps {
+            ansiColor('xterm') {
                 slackSend "Started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
                 sh 'echo "Printing environmental variables..."'
                 sh 'printenv'
