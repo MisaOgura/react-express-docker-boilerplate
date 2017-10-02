@@ -6,9 +6,7 @@ pipeline {
     stages {
         stage ("Test") {
             steps {
-                checkout scm
-
-                wrap([$class: “AnsiColorBuildWrapper”]) {
+                ansiColor('xterm') {
                     sh "npm install"
                     sh "npm run test"
                 }
