@@ -7,8 +7,8 @@ pipeline {
         stage ("Test") {
             steps {
                 ansiColor('xterm') {
-                    sh "npm install"
-                    sh "npm run test"
+                    sh "yarn install"
+                    sh "yarn test"
                 }
             }
         }
