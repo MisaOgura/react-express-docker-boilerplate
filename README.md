@@ -1,6 +1,6 @@
-## React-ES6-Express App with Docker
+## React/Redux + Express Boilerplate in ES6/7 & Docker
 
-_**Get your React application up and running under 2 minutes**_
+_**Get your React application up and running under 2 minutes!**_
 
 I wrote a [blog post](https://medium.com/@misaogura/hello-world-once-more-4d262286f138) on why I created this boilerplate and thoughts that went into it.
 
@@ -111,6 +111,8 @@ Happy TDD!
 
 Please feel free to raise PRs or open issues to help improve the boilerplate.
 
+#### contributors:
+- [sammorrow](https://github.com/sammorrow)
 
 ## Authour
 
