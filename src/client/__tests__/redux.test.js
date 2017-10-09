@@ -13,7 +13,7 @@ describe('store, reducers, action creators', () => {
     expect(CHANGE_MESSAGE).toBe('CHANGE_MESSAGE')
   })
 
-  it('adasdasldnasdlkn', () => {
+  it('Action creators construct appropriate objects', () => {
     const msg = 'A new message'
     expect(changeMessage(msg)).toMatchObject({
       type: 'CHANGE_MESSAGE',
@@ -21,19 +21,19 @@ describe('store, reducers, action creators', () => {
     })
   })
 
-  it('initialized with default state', () => {
+  it('Store is initialized with default state', () => {
     const state = fakeStore.getState().exampleReducer
     expect(state.message).toBe(defaultMessage)
   })
 
-  it('dispatched actions alter the store appropriately', () => {
+  it('Dispatched actions alter the store appropriately', () => {
     const msg = 'A new message'
     fakeStore.dispatch(changeMessage(msg))
     const state = fakeStore.getState().exampleReducer
     expect(state.message).toBe('A new message')
   })
 
-  it('overwrites the state properly with successive dispatches', () => {
+  it('State is properly overwritten with successive dispatches', () => {
     const msg = 'A new message'
     const newerMsg = 'The newest message'
     fakeStore.dispatch(changeMessage(msg))
