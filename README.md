@@ -111,8 +111,9 @@ Happy TDD!
 
 Please feel free to raise PRs or open issues to help improve the boilerplate.
 
-#### contributors:
+#### Many thanks to:
 - [sammorrow](https://github.com/sammorrow)
+- [Joseph Goodwin](https://github.com/jcgoodwin86)
 
 ## Authour
 
