@@ -4,7 +4,12 @@ _**Get your React application up and running under 2 minutes!**_
 
 I wrote a [blog post](https://medium.com/@misaogura/hello-world-once-more-4d262286f138) on why I created this boilerplate and thoughts that went into it.
 
-## Instruction
+## Updates
+- The React and related libraries are updated to the latest version as of 10/10/2017
+- The client side is hooked up with Redux! 09/10/2017
+- The app runs in Docker! 11/08/2017
+
+## Instructions
 
 ### To run the app locally
 
@@ -111,8 +116,9 @@ Happy TDD!
 
 Please feel free to raise PRs or open issues to help improve the boilerplate.
 
-#### contributors:
+#### Many thanks to:
 - [sammorrow](https://github.com/sammorrow)
+- [Joseph Goodwin](https://github.com/jcgoodwin86)
 
 ## Authour
 
