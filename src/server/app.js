@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   const pathToHtml = path.join(__dirname, './views/index.html')
   const template = fs.readFileSync(pathToHtml, 'utf8')
 
-  // Inserts a rendered react component to a loaded template (server-side rendering).
+  // Inserts a rendered react component to the loaded template (server-side rendering).
   const renderedHelloWorld = renderToString(<HelloWorld />)
   const page = template.replace('<!-- CONTENT -->', renderedHelloWorld)
 
