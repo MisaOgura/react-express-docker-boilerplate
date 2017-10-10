@@ -38,8 +38,8 @@
   },
   "homepage": "https://github.com/MisaOgura/react-express-docker-boilerplate#readme",
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2"
   },
@@ -52,13 +52,13 @@
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.16",
     "concurrently": "^3.5.0",
-    "enzyme": "^2.9.1",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
     "express": "^4.15.4",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^20.0.4",
     "nodemon": "^1.11.0",
-    "react-addons-test-utils": "^15.6.2",
-    "react-test-renderer": "^15.6.1",
+    "react-test-renderer": "^16.0.0",
     "standard": "^10.0.3",
     "supertest": "^3.0.0",
     "webpack": "^3.5.3",
@@ -67,6 +67,10 @@
   "jest": {
     "testPathIgnorePatterns": [
       "dist/"
+    ],
+    "setupFiles": [
+      "<rootDir>/src/shim.js",
+      "<rootDir>/src/setupTest.js"
     ]
   },
   "standard": {
