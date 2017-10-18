@@ -1,10 +1,12 @@
 const config = require('./webpack.config.js')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
-// Reduces the bundle size in production by retrieving those dependencies externally at runtime.
+// Reduces the bundle size in production by retrieving dependencies externally at runtime.
 config.externals = {
   'react': 'React',
-  'react-dom': 'ReactDOM'
+  'react-dom': 'ReactDOM',
+  'react-redux': 'ReactRedux',
+  'redux': 'Redux'
 }
 
 config.devtool = 'cheap-source-map'
