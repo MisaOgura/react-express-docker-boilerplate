@@ -62,7 +62,7 @@
     "standard": "^10.0.3",
     "supertest": "^3.0.0",
     "webpack": "^3.5.3",
-    "webpack-dev-server": "^2.8.2"
+    "webpack-dev-server": ">=3.1.11"
   },
   "jest": {
     "testPathIgnorePatterns": [
